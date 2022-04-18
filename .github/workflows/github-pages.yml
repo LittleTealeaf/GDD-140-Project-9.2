@@ -1,0 +1,23 @@
+name: Build Pages
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        cache: 'npm'
+    - name: Install Dependencies
+      run: npm install
+    - name: Publish to Github Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: '.'
+        exclude_assets: '.github,.gitignore,package-lock.json,package.json,README.md'

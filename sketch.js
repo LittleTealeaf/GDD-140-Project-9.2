@@ -1,5 +1,9 @@
 /// <reference path="./node_modules/@types/p5/global.d.ts" />
 
+/*
+This game has a title screen that contains the game instructions
+*/
+
 var player;
 var health = 100;
 var health_display = health;
@@ -41,9 +45,11 @@ function drawInstructions() {
     text("Avoid the Enemies!", width / 2, 100);
     textSize(15);
     text("Use the WASD movement keys to avoid enemies for as long as you can!", width / 2, 200);
-    text("You can use dash by hitting space", width / 2, 220);
+    text("You can dash by hitting SPACE", width / 2, 220);
     text("Be careful, hitting an enemy will reduce your health total", width / 2, 250);
-    text("When you are ready, hit Space to start");
+    text("When you are ready, hit SPACE to start!",width/2,300);
+
+    text("Created by: Thomas Kwashnak",width/2,height-15);
 }
 
 function drawGame() {

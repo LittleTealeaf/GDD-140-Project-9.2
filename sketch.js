@@ -44,10 +44,11 @@ function draw() {
  */
 function drawInstructions() {
     background(200);
+
     fill('black');
     textSize(40);
     textAlign(CENTER);
-    text("Avoid the Enemies!", width / 2, 100);
+    text("Avoid the Squares!", width / 2, 100);
     textSize(15);
     text("Use the WASD movement keys to avoid enemies for as long as you can!", width / 2, 200);
     text("You can dash by hitting SPACE", width / 2, 220);

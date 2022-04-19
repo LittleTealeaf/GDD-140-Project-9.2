@@ -10,7 +10,7 @@ var health_display = health;
 
 var startFrame;
 
-var framesSurvived;
+var secondsSurvived;
 
 var dashx = 0;
 var dashy = 0;
@@ -107,7 +107,7 @@ function drawGameOver() {
     fill('white');
     text("GAME OVER", width / 2, height / 2);
     textSize(20);
-    text("You survived for " + int(framesSurvived / frameRate()) + " seconds", width / 2, height * 2 / 3);
+    text("You survived for " + int(secondsSurvived) + " seconds", width / 2, height * 2 / 3);
     textSize(15);
     text("Press space to restart", width / 2, height * 3 / 4);
 }
@@ -138,7 +138,7 @@ function startGame() {
  */
 function gameOver() {
     //Sets the frame survived to the current elapsed time
-    framesSurvived = frameCount - startFrame;
+    secondsSurvived = (frameCount - startFrame) / frameRate();
 
     //Sets to the game over screen
     currentScreen = 2;

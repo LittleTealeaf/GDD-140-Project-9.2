@@ -19,6 +19,7 @@ var currentScreen = 0;
 
 function setup() {
     createCanvas(windowWidth - 20, windowHeight - 20);
+    frameRate(60);
 
     player = createSprite(width / 2, height / 2, 30, 30);
 }
@@ -94,7 +95,7 @@ function drawGame() {
     showHealth();
 
     //Game over if health is 0 or less
-    if (health <= 0) {
+    if (health < 0) {
         gameOver();
     }
 }

@@ -52,7 +52,7 @@ function drawInstructions() {
     text("Use the WASD movement keys to avoid enemies for as long as you can!", width / 2, 200);
     text("You can dash by hitting SPACE", width / 2, 220);
     text("Be careful, hitting an enemy will reduce your health total", width / 2, 250);
-    text("When you are ready, hit SPACE to start!", width / 2, 300);
+    text("When you are ready, press SPACE to start!", width / 2, 300);
 
     text("Created by: Thomas Kwashnak using p5.js and p5.play", width / 2, height - 15);
 }

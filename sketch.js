@@ -49,7 +49,7 @@ function drawInstructions() {
     text("Be careful, hitting an enemy will reduce your health total", width / 2, 250);
     text("When you are ready, hit SPACE to start!",width/2,300);
 
-    text("Created by: Thomas Kwashnak",width/2,height-15);
+    text("Created by: Thomas Kwashnak using p5.js and p5.play",width/2,height-15);
 }
 
 function drawGame() {
